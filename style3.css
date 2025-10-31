@@ -1,0 +1,134 @@
+/* ===== CHECKOUT PAGE STYLING ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+  color: #333;
+}
+.checkout-header {
+  text-align: center;
+  background: linear-gradient(135deg, #003b8b, #0059d6);
+  color: #fff;
+  padding: 40px 20px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.checkout-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.checkout-main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  background: #f9fbff;
+  border: 1px solid #dce6ff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 59, 139, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 59, 139, 0.15);
+}
+
+.cart-item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item-info h2 {
+  font-size: 18px;
+  color: #003b8b;
+}
+
+.cart-item-info p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.checkout-summary {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.checkout-summary h3 {
+  font-size: 20px;
+  color: #003b8b;
+  margin-bottom: 15px;
+}
+
+.checkout-btn {
+  background: linear-gradient(135deg, #007bff, #0056d6);
+  color: #fff;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background: linear-gradient(135deg, #0056d6, #003b9e);
+  transform: scale(1.05);
+}
+
+.back-link {
+  display: block;
+  margin-top: 15px;
+  color: #0056d6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.checkout-footer {
+  text-align: center;
+  background: #000;
+  color: #fff;
+  padding: 15px;
+  margin-top: 50px;
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  padding: 40px;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .cart-item-info h2 {
+    font-size: 16px;
+  }
+
+  .cart-item-info p {
+    font-size: 14px;
+  }
+
+  .checkout-btn {
+    width: 100%;
+  }
+}

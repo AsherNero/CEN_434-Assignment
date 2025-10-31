@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - The Course Store</title>
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+  <header class="checkout-header">
+    <h1>🛒 Checkout</h1>
+    <p>Review your courses before payment</p>
+  </header>
+
+  <main class="checkout-main">
+    <div id="cart-container" class="cart-container"></div>
+
+    <div class="checkout-summary">
+      <h3>Total: <span id="cart-total">$0</span></h3>
+      <button id="checkout-btn" class="checkout-btn">Confirm and Pay</button>
+      <a href="e-commercepage.html" class="back-link">← Back to Store</a>
+    </div>
+  </main>
+
+  <footer class="checkout-footer">
+    <p>&copy; 2025 Asher’s Mini Store</p>
+  </footer>
+
+  <script>
+    const cartContainer = document.getElementById("cart-container");
+    const totalDisplay = document.getElementById("cart-total");
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    let total = 0;
+
+    if (cartItems.length === 0) {
+      cartContainer.innerHTML = "<p class='empty-cart'>Your cart is empty.</p>";
+      document.querySelector('.checkout-summary').style.display = "none";
+    } else {
+      cartItems.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "cart-item";
+        card.innerHTML = `
+          <div class="cart-item-info">
+            <h2>${item.name}</h2>
+            <p>$${item.price}</p>
+          </div>
+        `;
+        cartContainer.appendChild(card);
+        total += item.price;
+      });
+      totalDisplay.textContent = `$${total}`;
+    }
+
+    document.getElementById("checkout-btn").onclick = () => {
+      alert("✅ Thank you for your purchase!");
+      localStorage.removeItem("cartItems");
+      window.location.href = "e-commercepage.html";
+    };
+  </script>
+
+</body>
+</html>

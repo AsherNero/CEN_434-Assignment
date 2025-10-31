@@ -1,0 +1,171 @@
+/* ===== General Styles ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/* ===== Header ===== */
+table[bgcolor="navy"] {
+  background-color: navy;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+table[bgcolor="navy"] font {
+  letter-spacing: 1px;
+}
+
+/* ===== Navigation ===== */
+table[cellspacing="15"] a {
+  text-decoration: none;
+  color: navy;
+  transition: color 0.3s;
+  font-size: 18px;
+}
+
+table[cellspacing="15"] a:hover {
+  color: #27ae60;
+}
+
+/* ===== Section Headings ===== */
+h2 {
+  color: navy;
+  font-size: 28px;
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
+/* ===== Product Cards ===== */
+table[border="1"] {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+table[border="1"]:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+table[border="1"] td {
+  text-align: center;
+  border-radius: 10px;
+}
+
+img {
+  border-radius: 8px;
+}
+
+input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+input[type="submit"] {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #219150;
+}
+
+/* ===== Contact Section ===== */
+table[bgcolor="#f4f4f4"] {
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #27ae60;
+  box-shadow: 0 0 5px rgba(39,174,96,0.3);
+}
+
+/* ===== Footer ===== */
+table[bgcolor="black"] {
+  background-color: #000;
+  margin-top: 50px;
+}
+
+table[bgcolor="black"] a {
+  text-decoration: none;
+}
+
+table[bgcolor="black"] a:hover font {
+  color: #1abc9c;
+}
+
+/* ===== Utility ===== */
+hr {
+  border: 0;
+  height: 2px;
+  background-color: #ddd;
+  margin: 40px 0;
+}
+/* ===== ADD TO CART BUTTON STYLE ===== */
+.add-to-cart {
+  background: linear-gradient(135deg, #007bff, #0056d6);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 91, 255, 0.2);
+}
+
+.add-to-cart:hover {
+  background: linear-gradient(135deg, #0056d6, #003b9e);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 91, 255, 0.3);
+}
+
+.add-to-cart:active {
+  transform: scale(0.97);
+}
+
+.add-to-cart:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 91, 255, 0.3);
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+  .add-to-cart {
+    width: 100%;
+    font-size: 16px;
+    padding: 14px 0;
+  }
+}
+
